@@ -1,5 +1,13 @@
 function countVowels(word) {
-  // your code here...
+  let count = 0;
+  let vowels = 'aeiou';
+  for (let i = 0; i < word.length; i++) {
+    let letter = word[i];
+    if (vowels.includes(letter)) {
+      count++;
+    }
+  }
+  return count;
 };
 
 console.log(countVowels("bootcamp")); // => 3
