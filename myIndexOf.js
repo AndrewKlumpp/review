@@ -1,7 +1,12 @@
-// your code here
-
-
-
+function myIndexOf(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    let char = arr[i];
+    if (target === char) {
+      return i;
+    }
+  }
+  return -1;
+};
 
 
 
