@@ -1,5 +1,27 @@
 function repeatingTranslate(sentence) {
+  let words = sentence.split(' ');
+  let translated = [];
 
+  for (let i = 0; i < words.length; i++) {
+    let word = words[i];
+    translated.push(translate(word));
+  }
+  return translated.join(' ');
+};
+
+function translate(word) {
+  let vowels = 'aeiou';
+  if (word.length < 3) {
+    return word;
+  }
+  for (let i = word.length - 1; i >= 0; i--) {
+    let letter = word[i];
+    if (vowels.includes(word[word.length - 1])) {
+      return word + word;
+    } else if (vowels.includes(letter)) {
+      return word + word.slice(i);
+    }
+  }
 };
 
 
