@@ -1,5 +1,13 @@
 function uncompress(str) {
-
+  let decompressed = '';
+  for (let i = 1; i < str.length; i += 2) {
+    let num = Number(str[i]);
+    let char = str[i - 1];
+    for (let j = 0; j < num; j++) {
+      decompressed += char;
+    }
+  }
+  return decompressed;
 };
 
 
